@@ -1,0 +1,31 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
+1,LED generic,LED,D2,1,LED_Wurth_WL-SMCW_0805_G,1,732-4986-1-ND
+2,LED generic,LED,D4,2,LED_Wurth_WL-SMCW_0805_G,1,732-4986-1-ND
+3,LED generic,LED,D6,3,LED_Wurth_WL-SMCW_0805_G,1,732-4986-1-ND
+4,Diode,D,D1 D3 D5,D,D_SOD-123,3,BAV21W-FDICT-ND
+5,"Generic screw terminal, single row, 01x03",Screw_Terminal_01x03,J1 J2 J3,Screw_Terminal_01x03,TerminalBlock_Phoenix_MKDS1.5-3pol,3,ED2610-ND
+6,,SONGLE_SPDT,K1 K2 K3,SONGLE_SPDT,Relay_SPDT_SANYOU_SRD_Series_Form_C,3,
+7,,CONN_01X06,P2,Analog,Socket_Strip_Arduino_1x06,1,
+8,,CONN_01X01,P5 P6 P7 P8,CONN_01X01,Arduino_1pin,4,
+9,,CONN_01X10,P3,Digital,Socket_Strip_Arduino_1x10,1,
+10,,CONN_01X08,P4,Digital,Socket_Strip_Arduino_1x08,1,
+11,,CONN_01X08,P1,Power,Socket_Strip_Arduino_1x08,1,
+12,Transistor NPN (general),Q_NPN_BEC,Q1 Q2 Q3,Q_NPN_BCE,SOT-23-3,3,MMBT3904-FDICT-ND
+13,Resistor,R,R1 R2 R3 R4 R5 R6,1k,SMD_pkg_0805,6,RR12P1.0KDCT-ND
+14,,SolderJumper,SJ1 SJ2 SJ3,SolderJumper,solderBridge,3,
+15,,Logo,logo1,Logo,Symbol_HighVoltage_Type2_SilkTop_VerySmall,1,
+
+
+
+
+
+Component Groups:,15
+Component Count:,33
+Fitted Components:,33
+Number of PCBs:,1
+Total components:,33
+Schematic Version:,
+Schematic Date:,lun. 30 mars 2015
+BoM Date:,9/29/2018 4:13:31 PM
+Schematic Source:,C:\projects\RelayUno\RelayUno.sch
+KiCad Version:,Eeschema 4.0.7
