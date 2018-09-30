@@ -23,27 +23,33 @@ unsigned long Time = 0;
 unsigned long prevTime = 0;
 
 void setup() {
-
+  Serial.begin(9600);
+  
+  pinMode(LED_BUILTIN, OUTPUT);
   pinMode(Relay1, OUTPUT);
   pinMode(Relay2, OUTPUT);
   pinMode(Relay3, OUTPUT);
   pinMode(PIR, INPUT);
   zAxis.attach(Servo1);
   yTilt.attach(Servo2);
-
+  yTilt.write(0);
+  Serial.println("Started!");
 }
 
 void loop() {
-  if ((millis() - prevTime) > 30000) {
+  if ((millis() - prevTime) > 10000) {
+    Serial.println("Ready for Scare!");
     waitMotion();
   }
 }
 
 void waitMotion() {
-  while () {
+  while (1) {
     motion = digitalRead(PIR);
     if (motion) {
+      Serial.println("Motion Detected - Start Scare!");
       prevTime = millis(); //Reset time stamp upon triggering SPOOK
+      digitalWrite(LED_BUILTIN, HIGH);
       SPOOK();             //Scare Action Function
       return;
     }
@@ -54,10 +60,11 @@ void SPOOK() {
   //Servo Triggering
   yTilt.write(90);
   delay(1000);
-  for(int i = 89; i > -1; i--){
+  for(int i = 89; i > 3; i--){
     yTilt.write(i);
     delay(30);
   }
+  
   
   /* 
   //Relay Triggering
@@ -65,5 +72,7 @@ void SPOOK() {
   delay(25);
   digitalWrite(Relay1 = 0);
   */
+   Serial.println("Scare Done!");
+   digitalWrite(LED_BUILTIN, LOW);
 }
 
